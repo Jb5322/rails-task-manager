@@ -1,0 +1,78 @@
+.inbox {
+  border: 2px solid black;
+  padding: 0 0px;
+  margin: 0;
+}
+.message {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+  background-color: grey;
+}
+.message:last-child {
+  border-bottom: none;
+}
+.message-body {
+  flex-grow: 1;
+}
+.message-name {
+  padding-left: 0px;
+  min-width: 100px;
+}
+.message-name h3 {
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+.message-name p {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+.message-body {
+  padding-left: 10px;
+  font-size: 13px;
+  color: rgba(0,0,0,0.7);
+}
+.message-body {
+  padding-left: 20px;
+  color: rgba(0,0,0,0.4);
+}
+.message-body strong{
+  color: rgba(0,0,0,0.9);
+  color: rgba(0,0,0,0.9);
+}
+.message-body p {
+  margin: 6px 0;
+}
+.message-status {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-top: -7px;
+}
+
+.status.pending {
+  text-align: center;
+}
+
+.choice {
+  margin-left: 20px;
+  text-align: center;
+}
+
+.fa-trash {
+  color: black;
+}
+
+.fa-edit {
+  color: black;
+}
+
+.edit_item {
+  margin-left: 25px;
+}
+
+.details {
+  text-align: justify;
+}

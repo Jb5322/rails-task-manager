@@ -1,0 +1,38 @@
+<div class="container">
+
+  <h1>Your Tasks</h1>
+
+  <div class="tabs">
+    <a href="#" class="tab active">Tasks</a>
+    <a href="#" class="tab"><%= link_to "Create Task", new_task_path %></a>
+  </div>
+
+  <ul class="inbox">
+    <% @tasks.each do |task| %>
+    <li class="message">
+      <div class="message-status">
+        <p class="status pending">
+          <% if task.completed %>
+          <i class="fas fa-check-square"></i>
+          <% else %>
+          <i class="fas fa-square"></i>
+          <% end %>
+        </p>
+      </div>
+      <div class="message-name">
+        <h3><%= link_to "#{task.name}", task_path(task) %></h3><br>
+      </div>
+      <div class="message-body">
+        <p class="details">
+          <%= task.details %>
+        </p>
+      </div>
+      <div class="edit_item">
+        <%= link_to edit_task_path(task) do %><i class="fas fa-edit"></i><% end %>
+      </div>
+      <div class="choice">
+        <%= link_to task_path(task), method: :delete do %><i class="fas fa-trash"></i><% end %>
+      </div>
+    </li>
+  </ul>
+<% end  %>
